@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
+    public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,19 +14,24 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("A");
+            transform.Translate(speed * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("B");
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("C");
+          transform.Translate(0, speed * Time.deltaTime, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+          transform.Translate(0, -speed * Time.deltaTime, 0);
         }
     }
 }
