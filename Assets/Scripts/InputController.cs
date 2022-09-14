@@ -5,7 +5,8 @@ using UnityEngine;
 public class InputController : MonoBehaviour
 {
     public float speed = 10f;
-    public Camera cameraMain;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,21 +38,10 @@ public class InputController : MonoBehaviour
             transform.Translate(0, -speed * Time.deltaTime, 0);
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cameraMain.ScreenPointToRay(cameraMain.ScreenToWorldPoint(Input.mousePosition));
 
-            RaycastHit hit;
 
-            // Debug.Log(Physics.Raycast(ray, out hit));
-            // Debug.Log(Input.mousePosition);
-            // Debug.Log(cameraMain.ScreenToWorldPoint(Input.mousePosition));
-            Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                hit.transform.GetComponent<SpriteRenderer>().color = Color.black;
-            }
-        }
+
+
     }
 }

@@ -19,8 +19,8 @@ public class PosotionController : MonoBehaviour
     float duration = 1f;
     float rate = 0;
     // float time = 0;
-    float timeDelay = 0;
-    bool isCanReturn = false;
+    // float timeDelay = 0;
+    // bool isCanReturn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,22 +37,22 @@ public class PosotionController : MonoBehaviour
         // StartCoroutine(WaitAndMove(Random.Range(1, 2)));
     }
 
-    IEnumerator WaitAndMove(int time)
-    {
-        while (true)
-        {
-            if (isAtB)
-            {
-                yield return new WaitForSeconds(time);
-                Debug.Log("Delay after " + time + "s");
-                isCanReturn = true;
-                break;
-            }
+    // IEnumerator WaitAndMove(int time)
+    // {
+    //     while (true)
+    //     {
+    //         if (isAtB)
+    //         {
+    //             yield return new WaitForSeconds(time);
+    //             Debug.Log("Delay after " + time + "s");
+    //             isCanReturn = true;
+    //             break;
+    //         }
 
-            yield return null;
-        }
+    //         yield return null;
+    //     }
 
-    }
+    // }
 
     // Update is called once per frame
     void Update()
@@ -93,6 +93,9 @@ public class PosotionController : MonoBehaviour
 
         //Exam 4
 
+        // car.transform.position = Vector3.Slerp(pointA.position, pointB.position, time / Vector2.Distance(car.position, pointC.position));
+        // time += Time.deltaTime;
+
         //Exam 5
         // if (!isAtB)
         // {
@@ -103,6 +106,7 @@ public class PosotionController : MonoBehaviour
         //     car.transform.position = Vector3.MoveTowards(car.transform.position, pointA.position, Time.deltaTime * speed);
         // }
 
+        //Exam7
 
         // if (Vector2.Distance(car.position, pointB.position) < 0.1f)
         // {
@@ -130,5 +134,9 @@ public class PosotionController : MonoBehaviour
         // {
         //     isAtB = true;
         // }
+
+        //Exam 12
+
+
     }
 }
