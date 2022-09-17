@@ -10,7 +10,6 @@ public class Exam10 : MonoBehaviour
     public Transform pointC;
     private bool isAtB = false;
     public float speed = 2f;
-    float timeDelay = 0;
     bool isCanReturn = false;
 
     // Start is called before the first frame update

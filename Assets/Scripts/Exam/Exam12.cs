@@ -47,5 +47,7 @@ public class Exam12 : MonoBehaviour
         {
             Debug.Log("Complete");
         }
+
+        Debug.Log("Testlog");
     }
 }
